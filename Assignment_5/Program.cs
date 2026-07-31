@@ -26,5 +26,22 @@ internal class Program
         // => make data read-only to the others
 
         #endregion
+
+        #region Question3
+        //Create a DeliveryAddress struct
+        //Create one DeliveryAddress value, copy it into a second variable, modify the copy, and print both values to prove that the original did not change.
+
+        //DeliveryAddress originalAddress = new DeliveryAddress("Benisuef", "Somosta", 26);
+
+        //DeliveryAddress copiedAddress = originalAddress;
+
+        //copiedAddress.City = "cairo";
+        //copiedAddress.BuildingNumber = 25;
+        //copiedAddress.Street = "giza";
+
+        //Console.WriteLine($"Original Address: {originalAddress.GetFullAddress()}");
+        //Console.WriteLine($"Copied Address:   {copiedAddress.GetFullAddress()}");
+
+        #endregion
     }
 }
