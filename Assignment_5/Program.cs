@@ -52,5 +52,56 @@ internal class Program
         //myShipment.PrintShipment();
 
         #endregion
+
+        #region Question5
+        DeliveryCenter center = new DeliveryCenter();
+
+        for (int i = 1; i <= 3; i++)
+        {
+            Console.WriteLine($"\nEnter Shipment {i} Data");
+
+            Console.Write("Tracking Code: ");
+            string trackingCode = Console.ReadLine();
+
+            Console.Write("Description: ");
+            string description = Console.ReadLine();
+
+            Console.Write("Weight: ");
+            double weight = double.Parse(Console.ReadLine());
+
+            Console.Write("Delivery Fee: ");
+            decimal fee = decimal.Parse(Console.ReadLine());
+
+            Console.Write("City: ");
+            string city = Console.ReadLine();
+
+            Console.Write("Street: ");
+            string street = Console.ReadLine();
+
+            Console.Write("Building Number: ");
+            int buildingNum = int.Parse(Console.ReadLine());
+
+            DeliveryAddress address = new DeliveryAddress(city, street, buildingNum);
+            Shipment newShipment = new Shipment(trackingCode, description, weight, fee, address);
+
+            center.AddShipment(newShipment);
+            Console.WriteLine("\nShipment added successfully.");
+        }
+
+
+        Console.Write("\nEnter a tracking code to search: ");
+        string searchCode = Console.ReadLine();
+
+        Shipment foundShipment = center[searchCode];
+        if (foundShipment.TrackingCode != null)
+        {
+            Console.WriteLine($"Shipment found: {foundShipment.TrackingCode} - {foundShipment.Description}");
+        }
+        else
+        {
+            Console.WriteLine("Shipment not found.");
+        }
+        
+        #endregion
     }
 }
