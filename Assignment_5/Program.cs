@@ -14,5 +14,17 @@ internal class Program
         // => the both variables will be changed
 
         #endregion
+
+        #region Question2
+        //(a) Identify at least three problems with this design from an encapsulation perspective.
+        // => Anyone can set invalid values
+        // => public fields are open to both reading and writing and any one can change on it
+        // => if we need to change fields, it will break any external code related to them
+
+        //(b) How can private fields and public properties improve this design?
+        // => Hiding Implementation Details
+        // => make data read-only to the others
+
+        #endregion
     }
 }
