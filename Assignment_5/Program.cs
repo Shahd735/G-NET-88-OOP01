@@ -43,5 +43,14 @@ internal class Program
         //Console.WriteLine($"Copied Address:   {copiedAddress.GetFullAddress()}");
 
         #endregion
+
+        #region Question4
+        //DeliveryAddress address = new DeliveryAddress("Cairo", "giza", 115);
+
+        //Shipment myShipment = new Shipment("12345", "Laptop", 2.0, 50m, address);
+
+        //myShipment.PrintShipment();
+
+        #endregion
     }
 }
